@@ -5,7 +5,6 @@
   "type": "module",
   "homepage": "https://github.com/aymericpayen/singulier.io",
   "scripts": {
-    "start": "react-scripts-start",
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
