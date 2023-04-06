@@ -4,8 +4,7 @@ import { useState } from "react";
 function Section({ title, color, className = "", i }) {
   const [selected, setSelected] = useState(null);
   const toggle = (i) => {
-    console.log(i);
-    if (selected == i) {
+    if (selected === i) {
       return setSelected(null);
     }
     setSelected(i);

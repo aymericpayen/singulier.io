@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "PowerGroteskTrial-Heavy"; /*Can be any text*/
+  src: local("PowerGroteskTrial-Heavy"),
+    url("./font/PowerGroteskTrial-Heavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PowerGroteskTrial-HeavyItalic"; /*Can be any text*/
+  src: local("PowerGroteskTrial-HeavyItalic"),
+    url("./font/PowerGroteskTrial-HeavyItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PowerGroteskTrial-Regular"; /*Can be any text*/
+  src: local("PowerGroteskTrial-Regular"),
+    url("./font/PowerGroteskTrial-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PowerGroteskTrial-Bold"; /*Can be any text*/
+  src: local("PowerGroteskTrial-Bold"),
+    url("./font/PowerGroteskTrial-Bold.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "Familjen Grotesk", sans-serif;
+}
