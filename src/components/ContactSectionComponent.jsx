@@ -1,19 +1,33 @@
 import cn from "classnames";
-import { useState } from "react";
 import ContactForm from "./ContactFormComponent";
+import signatureOrange from "../img/signature_orange.svg";
 
-function ContactSection({ title, subtitle, content }) {
+function ContactSection({
+  title,
+  subtitle,
+  content,
+  signature,
+  classname,
+  id,
+  buttonColor,
+}) {
   return (
     <div
-      className="snap-start h-[80vh] flex flex-row bg-third-color-light-blue border-t-4 border-black items-center justify-between space-y-4 px-4"
-      id="company"
+      className={cn(
+        "h-[91vh] scroll-mt-16 flex flex-row items-center justify-between space-y-4 px-4 z-0",
+        classname
+      )}
+      id={id}
     >
-      <div className="w-4/6 space-y-4">
+      <div className="w-4/6 space-y-4 m-4">
         <h1 className="text-6xl text-white text-bold">{title}</h1>
         <h2 className="text-2xl">{subtitle}</h2>
         <p className="text-lg">{content}</p>
+        <div className="flex justify-end">
+          <img src={signatureOrange} alt="logo" className="w-64 h-12"></img>
+        </div>
       </div>
-      <ContactForm className="w-2/6" />
+      <ContactForm buttonColor={buttonColor} />
     </div>
   );
 }

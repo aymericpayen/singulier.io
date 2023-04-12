@@ -4,7 +4,7 @@ import cn from "classnames";
 const FORM_ENDPOINT =
   "https://public.herotofu.com/v1/3f656570-d197-11ed-a62e-917cebf1b719"; // TODO - fill on the later step
 
-const ContactForm = (className) => {
+const ContactForm = ({ buttonColor }) => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
     setTimeout(() => {
@@ -22,7 +22,7 @@ const ContactForm = (className) => {
   }
 
   return (
-    <div className={cn("w-1/2 snap-center", className)}>
+    <div className={cn("w-2/6 m-4")}>
       <form
         action={FORM_ENDPOINT}
         onSubmit={handleSubmit}
@@ -34,7 +34,7 @@ const ContactForm = (className) => {
             type="text"
             placeholder="Nom"
             name="lastName"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -43,7 +43,7 @@ const ContactForm = (className) => {
             type="text"
             placeholder="Prénom"
             name="firstName"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -52,7 +52,7 @@ const ContactForm = (className) => {
             type="text"
             placeholder="Entreprise"
             name="Company"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -61,7 +61,7 @@ const ContactForm = (className) => {
             type="text"
             placeholder="Votre rôle"
             name="position"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -70,7 +70,7 @@ const ContactForm = (className) => {
             type="email"
             placeholder="Email"
             name="email"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -79,7 +79,7 @@ const ContactForm = (className) => {
             type="text"
             placeholder="Téléphone"
             name="phoneNumber"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -87,7 +87,7 @@ const ContactForm = (className) => {
           <textarea
             placeholder="Your message"
             name="message"
-            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
             required
           />
         </div>
@@ -100,7 +100,10 @@ const ContactForm = (className) => {
         </div>
         <div className="mb-3 pt-0">
           <button
-            className="bg-second-color-orange text-black border border-black font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className={cn(
+              "bg-second-color-orange text-black border border-black font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150",
+              buttonColor
+            )}
             type="submit"
           >
             Envoyer

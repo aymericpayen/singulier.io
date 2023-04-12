@@ -14,9 +14,9 @@ function App() {
     setSelected(i);
   };
   return (
-    <div className="snap-y snap-mandatory overflow-scroll">
+    <>
       <div
-        className="snap-start flex flex-1 h-[80vh] border-t-4 border-black"
+        className="snap-start scroll-mt-20 flex flex-1 h-[90vh]"
         id="history"
       >
         {data.map((item, i) => (
@@ -67,9 +67,22 @@ function App() {
         subtitle="Notre rôle est de mettre en avant les singularités de votre entreprise pour créer des collaborations d’avenir."
         content="Partenaire de votre croissance, nous personnalisons vos recrutements avec une approche sur-mesure."
         signature={true}
-        className="snap-start"
+        classname="snap-center bg-primary-color-blue"
+        id="company"
+        buttonColor="bg-second-color-orange"
       />
-    </div>
+      <ContactSection
+        title="Talents"
+        subtitle="Rassurez-vous, nous sommes aussi passés par là."
+        content="Quoi de mieux que de discuter avec des Recruteurs qui vous comprennent ?
+
+                Nous recrutons avec un esprit de curiosité, de transparence et de réussite."
+        signature={true}
+        classname="snap-center bg-third-color-light-blue flex-row-reverse"
+        id="talents"
+        buttonColor="bg-second-color-orange"
+      />
+    </>
   );
 }
 

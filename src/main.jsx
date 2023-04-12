@@ -8,8 +8,10 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Header />
-    <App />
-    <Footer />
+    <div className="snap-y snap-mandatory h-screen overflow-scroll">
+      <Header />
+      <App />
+      <Footer />
+    </div>
   </React.StrictMode>
 );
